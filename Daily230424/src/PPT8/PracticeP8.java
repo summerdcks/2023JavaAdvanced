@@ -34,7 +34,7 @@ public class PracticeP8 {
 		String[] min__k36 = {};
 		String[] max__k36 = {};
 		
-		int LineCnt_k36 = 0;	//항목갯수 표시 위해 정수형 변수 선언
+		int LineCnt_k36 = 1;	//항목갯수 표시 위해 정수형 변수 선언
 		while((readtxt_k36 = br_k36.readLine()) != null) {	//더이상 읽을 내용이 없을 때까지 반복
 			String[] field_k36 = readtxt_k36.split("\t");
 			//읽어들인 내용(내용)을 \t기준으로 나눠서 차례대로 문자열배열 field에 담아줌
@@ -60,21 +60,21 @@ public class PracticeP8 {
 			LineCnt_k36++;	//몇줄까지 읽었는지 +1로 표시
 		}	
 		System.out.printf("**[최소거리]**************************\n");	//출력
-		System.out.printf("최소거리 : %f\n", min_k36);
-		System.out.printf("%s : %s\n", field_name_k36[2], min__k36[2]);	//장소명
+		System.out.printf("%s : %s\n", field_name_k36[2], min__k36[2]);		//장소명
 		System.out.printf("%s : %s\n", field_name_k36[9], min__k36[9]);		//도로명주소
 		System.out.printf("%s : %s\n", field_name_k36[10], min__k36[10]);	//지번주소
 		System.out.printf("%s : %s\n", field_name_k36[13], min__k36[13]);	//위도주소
-		System.out.printf("%s : %s\n", field_name_k36[14], min__k36[14]);	//경도주소	
+		System.out.printf("%s : %s\n", field_name_k36[14], min__k36[14]);	//경도주소
+		System.out.printf("최소거리 : %f\n", min_k36);
 		System.out.printf("************************************\n");	//출력
 				
 		System.out.printf("**[최대거리]**************************\n");	//출력
-		System.out.printf("최대거리 : %f\n", max_k36);
-		System.out.printf("%s : %s\n", field_name_k36[2], max__k36[2]);	//장소명
+		System.out.printf("%s : %s\n", field_name_k36[2], max__k36[2]);		//장소명
 		System.out.printf("%s : %s\n", field_name_k36[9], max__k36[9]);		//도로명주소
 		System.out.printf("%s : %s\n", field_name_k36[10], max__k36[10]);	//지번주소
 		System.out.printf("%s : %s\n", field_name_k36[13], max__k36[13]);	//위도주소
 		System.out.printf("%s : %s\n", field_name_k36[14], max__k36[14]);	//경도주소	
+		System.out.printf("최대거리 : %f\n", max_k36);
 		System.out.printf("************************************\n");	//출력
 		
 		br_k36.close();	//파일 닫기
