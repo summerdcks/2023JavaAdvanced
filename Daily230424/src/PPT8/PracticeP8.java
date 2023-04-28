@@ -17,7 +17,7 @@ public class PracticeP8 {
 		
 		if((readtxt_k36 = br_k36.readLine()) == null) {	//파일에 읽어낼 내용이 없으면
 			System.out.printf("빈 파일입니다\n");	//해당문구 출력
-			return;
+			return;		//메인함수 종료
 		}
 		String[] field_name_k36 = readtxt_k36.split("\t");
 		//읽어들인 내용(제목)을 \t기준으로 나눠서 문자열배열에 담아줌
