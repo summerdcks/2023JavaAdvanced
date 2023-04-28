@@ -19,7 +19,7 @@ public class WifiItemDao {
 	}
 	
 	public List<WifiItem> selectAll() throws IOException {	//객체배열 형식의 메소드 선언
-		List<WifiItem> item_k36 = new ArrayList<>();			//객체배열 item선언
+		List<WifiItem> wifiItems_k36 = new ArrayList<>();	//객체배열 items선언
 		File f_k36 = new File("C:\\Users\\DataSWB\\Desktop\\성남무료와이파이정보.txt");
 		//해당 경로의 파일을 객체로 선언
 		BufferedReader br_k36 = new BufferedReader(new FileReader(f_k36));
@@ -28,20 +28,34 @@ public class WifiItemDao {
 		if((readtxt_k36 = br_k36.readLine()) == null) {	//파일에 읽어낼 내용이 없으면
 			System.out.printf("빈 파일입니다\n");	//해당문구 출력
 		}
+		
+		String[] fieldName_k36 = readtxt_k36.split("\t");
+		
 		while((readtxt_k36 = br_k36.readLine()) != null) {	//더이상 읽을 내용이 없을 때까지 한줄씩 읽어오기 반복
 			String[] field_k36 = readtxt_k36.split("\t");	//읽어온 줄을 탭을 기준으로 나눠 담은 문자열형 배열 field 생성
-			WifiItem a_k36 = new WifiItem();	//WifiItem형식의 객체 a 생성
-			a_k36.setId_k36(Integer.parseInt(field_k36[0]));	
+			WifiItem wifiItem_k36 = new WifiItem();	//WifiItem형식의 객체 a 생성
+			wifiItem_k36.setId_k36(Integer.parseInt(field_k36[0]));	
+			wifiItem_k36.setInstallationLocationName_k36(field_k36[1]);
 			//읽어온 줄의 0번째 문자열을 정수변환하여 a객체의 set메소드로 받아 해당 변수에 값을 대입해줌
-			a_k36.setInstallationLocationDetails_k36(field_k36[2]);
-			a_k36.setRoadNameAddress_k36(field_k36[9]);
-			a_k36.setLotNumberAddress_k36(field_k36[10]);
-			a_k36.setLatitude_k36(Double.parseDouble(field_k36[13]));
-			a_k36.setLongitude_k36(Double.parseDouble(field_k36[14]));
+			wifiItem_k36.setInstallationLocationDetails_k36(field_k36[2]);
+			wifiItem_k36.setInstallationCityName_k36(field_k36[3]);
+			wifiItem_k36.setInstallationDistrictName_k36(field_k36[4]);
+			wifiItem_k36.setInstallationFacilityType_k36(field_k36[5]);
+			wifiItem_k36.setServiceProviderName_k36(field_k36[6]);
+			wifiItem_k36.setWifiSsid_k36(field_k36[7]);
+			wifiItem_k36.setDateOfInstallation_k36(field_k36[8]);
+			wifiItem_k36.setRoadNameAddress_k36(field_k36[9]);
+			wifiItem_k36.setLotNumberAddress_k36(field_k36[10]);
+			wifiItem_k36.setManagementAgencyName_k36(field_k36[11]);
+			wifiItem_k36.setManagementAgencyPhoneNumber_k36(field_k36[12]);
+			wifiItem_k36.setLatitude_k36(Double.parseDouble(field_k36[13]));
+			wifiItem_k36.setLongitude_k36(Double.parseDouble(field_k36[14]));
+			wifiItem_k36.setCreated_k36(field_k36[15]);
+			wifiItem_k36.setFieldName_k36(fieldName_k36);
 			//읽어온 줄의 14번째 문자열을 실수변환하여 a객체의 set메소드로 받아 변수에 값을 대입해줌
-			item_k36.add(a_k36); //값이 담아진 a객체를 item객체배열의 변수로 담아줌
+			wifiItems_k36.add(wifiItem_k36); //값이 담아진 a객체를 items객체배열의 변수로 담아줌
 		}
-		return item_k36;	//파일내용이 item객체배열에 모두 담긴 값을 리턴해줌
+		return wifiItems_k36;	//파일내용이 items객체배열에 모두 담긴 값을 리턴해줌
 	}
 	
 	public WifiItem update(WifiItem wifiItem_k36) {

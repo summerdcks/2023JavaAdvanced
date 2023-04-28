@@ -17,6 +17,7 @@ public class WifiItem {	//클래스 WifiItem을 선언
 	private double latitude_k36;
 	private double longitude_k36;
 	private String created_k36;
+	private String[] fieldName_k36;
 	//생성된 객체에 담길 변수들 선언
 	
 	//객체의 변수들에 값을 받아와 담아줄 setter와 외부로 내보내줄 getter 생성 
@@ -116,7 +117,11 @@ public class WifiItem {	//클래스 WifiItem을 선언
 	public void setCreated_k36(String created_k36) {
 		this.created_k36 = created_k36;
 	}
-
-	
+	public String[] getFieldName_k36() {
+		return fieldName_k36;
+	}
+	public void setFieldName_k36(String[] fieldName_k36) {
+		this.fieldName_k36 = fieldName_k36;
+	}
 
 }
