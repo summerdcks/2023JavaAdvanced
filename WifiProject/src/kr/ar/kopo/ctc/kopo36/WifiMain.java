@@ -39,10 +39,10 @@ public class WifiMain {	//메인클래스 선언
 			//wifiItemServicer객체의 getDistance메소드에 me와 target객체를 대입한 리턴값을 실수형 d로 할당해준다
 			//현재위치와 상대위치의 위도와 경도값을 계산하여 현재지점과의 거리를 리턴해준다
 			if(minn_k36 >= d_k36) {		//해당거리가 최소거리보다 작을때의
-				min_k36 = target_k36.getId_k36();	//인덱스번호
+				min_k36 = target_k36.getId_k36() -1;	//인덱스번호
 			}
 			if(maxx_k36 <= d_k36) {		//해당거리가 최대거리보다 크면
-				max_k36 = target_k36.getId_k36();	//인덱스번호		
+				max_k36 = target_k36.getId_k36() -1;	//인덱스번호		
 			}
 			minn_k36 = Math.min(minn_k36, d_k36);	//최소거리 업데이트
 			maxx_k36 = Math.max(maxx_k36, d_k36);	//최대거리 업데이트
