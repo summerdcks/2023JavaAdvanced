@@ -10,12 +10,12 @@ import java.io.IOException;
 public class PracticeP10 {
 
 	public static void main(String[] args) throws IOException {
-		File f_k36 = new File("C:\\Users\\DataSWB\\Desktop\\THTSKS010H00.dat");
+		File f_k36 = new File("C:\\Users\\DataSWB\\Desktop\\자바심화 자료\\THTSKS010H00.dat");
 		//File클래스의 객체 f를 생성하여 파일 경로를 지정
 		BufferedReader br_k36 = new BufferedReader(new FileReader(f_k36));
 		//BufferedReader클래스의 객체 br을 생성하고 FileReader클래스를 사용하여 f파일을 읽어들임
 		
-		File f1_k36= new File("C:\\Users\\DataSWB\\Desktop\\StockDailyPrice.csv");
+		File f1_k36= new File("C:\\Users\\DataSWB\\Desktop\\자바심화 자료\\StockDailyPrice.csv");
 		//File클래스의 객체 f1를 생성하여 파일 경로를 지정
 		BufferedWriter bw1_k36 = new BufferedWriter(new FileWriter(f1_k36));
 		//f1 파일에 문자를 작성하는 BufferedWriter 객체인 bw1를 생성

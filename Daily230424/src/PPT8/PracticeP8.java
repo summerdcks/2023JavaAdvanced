@@ -8,7 +8,7 @@ import java.io.IOException;
 public class PracticeP8 {
 
 	public static void main(String[] args) throws IOException {
-		File f_k36 = new File("C:\\Users\\DataSWB\\Desktop\\성남무료와이파이정보.txt");
+		File f_k36 = new File("C:\\Users\\DataSWB\\Desktop\\자바심화 자료\\성남무료와이파이정보.txt");
 		//해당 경로의 파일을 객체로 선언
 		BufferedReader br_k36 = new BufferedReader(new FileReader(f_k36));
 		//객체 br를 생성하며 f를 FileReader와 BufferedReader에 연결하며 선언
